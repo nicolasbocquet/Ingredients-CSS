@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="Description pour le résultat des moteurs de recherche">
+		<meta name="author" content="Nicolas Bocquet">
+		<meta name="viewport" content="initial-scale=1.0"> 
+		
+		<title>Titre de la page</title>
+
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  		
+		<link rel="stylesheet" media="all" href="stylesheets/ingredient.css?update=21092012">		
+		<!--[if lte IE 8]><link rel="stylesheet" href="stylesheets/ie.css" media="all" /><![endif]-->
+		<!--[if lte IE 9]><script src="javascripts/html5-ie.js"></script><![endif]-->		
+	</head>
+
+	<body>
+		<!--[if lte IE 7]>
+		<p class="alertIE">
+			<strong>Attention !</strong> Votre navigateur (Internet Explorer 6 ou 7) présente de sérieuses lacunes en 
+			terme de sécurité et de performances, dues à son obsolescence (IE6 date de 2001).
+			En conséquence, ce site sera consultable mais de manière moins optimale qu'avec 
+			un navigateur récent (<a href="http://www.microsoft.com/france/windows/internet-explorer/telecharger-ie9.aspx">Internet Explorer 9+</a>, <a href="http://www.mozilla.com/fr/firefox/">Firefox 5+</a>, <a href="http://www.opera.com/">Opera 11+</a>, <a href="http://www.apple.com/fr/safari/download/">Safari 5+</a>, ...)
+		</p>
+		<![endif]-->
+
+		<!-- Skiplinks for accessibility -->
+		<nav id="skipLinks">
+			<ul>
+				<li><a href="#navigation">To Navigation</a></li>
+				<li><a href="#main">To Content</a></li>
+				<li><a href="#footer">To Footer</a></li>
+			</ul>
+		</nav>
+	
+		<!-- Optionnal top nav -->		
+		<div id="topNav">
+			<div class="inside">
+				<a href="/" class="logo"><img src="assets/logoSmall.png" width="51" height="33" alt="Logo" /></a>				
+				<nav>
+					<ul>
+						<li><a href="/">Link 1</a></li>
+						<li><a href="/">Link 2</a></li>
+						<li><a href="/">Link 3</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- A banner can take up less space than that -->
+		<div id="banner" role="banner">
+			<div class="inside">
+				<hgroup>
+					<h1 class="logo">Ingredients CSS</h1>
+					<h2 class="baseline">For HTML &amp; CSS cooking !</h2>
+				</hgroup>
+				
+				<form action="/" method="get">
+					<div id="search" role="search">
+						<input id="inputSearch" type="text" name="" value="" placeholder="" />
+						<button type="submit" class="btn btnType01"><span class="btnInside">Search</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<!-- Classic navigation -->
+		<nav id="navigation" role="navigation">
+			<ul class="inside">
+				<li><a href="/">Menu 1</a></li>
+				<li><a href="/">Menu 2</a></li>
+				<li><a href="/">Menu 3</a></li>
+				<li><a href="/">Menu 4</a></li>
+				<li><a href="/">Menu 5</a></li>
+			</ul>
+		</nav>
+
+		<!-- Breadcrumbs -->
+		<nav id="breadcrumbs">
+			<p class="inside">
+				<a href="/" rel="index up up up">Accueil</a> >
+				<a href="/" rel="up up">Page 1</a> >
+				<a href="/" rel="up">Page 2</a> >
+				<span>Vous êtes ici</span>
+			</p>
+		</nav>
+		
+		<!-- Main content -->
+		<div id="content">
+			<div class="inside">
+				
+				<!-- Sidebar -->	
+				<aside id="complementary" role="complementary">
+					<div class="inside">
+						<h2>SIDEBAR</h2>
+					</div>
+				</aside>
+				<!-- FIN sidebar -->
+				
+				<div id="main" role="main">	
+					<!-- Buttons -->			
+					<section>
+						<h2>Buttons</h2>
+						<section>
+							<h3>Button Types</h3>
+							<p>
+								Default button : <a href="/" class="btn"><span class="btnInside">&lt;... class="btn"&gt;</span></a>
+							</p>
+							<p>
+								Button type 1 : <a href="/" class="btn btnType01"><span class="btnInside">&lt;... class="btn btnType01"&gt;</span></a>
+							</p>
+							<p>
+								Button type 2 : ...
+							</p>
+							<p>
+								Button "link" : <button type="submit" class="btnLink">&lt;... class="btnLink"&gt;</button>
+							</p>
+						</section>
+						<section>
+							<h3>Works with &lt;a&gt; and &lt;button&gt;</h3>
+							<a href="/" class="btn"><span class="btnInside">&lt;a class="btn"&gt;</span></a>
+							<button class="btn" type="button"><span class="btnInside">&lt;button class="btn"&gt;</span></button>
+						</section>
+					</section>
+					
+					<section>
+						<h2>Blocs</h2>
+						
+						<section>
+							<h3>General blocs</h3>
+							<p>You can do whatever you want with these blocs and style them how you think it is the most effective.</p>
+							
+							<!-- blocType01 -->
+							<div class="bloc blocType01">
+								<div class="header">
+									<h4 class="heading">Bloc type 1 <span>header</span></h4>
+								</div>
+								<div class="body">
+									<p>bloc content</p>
+<pre><code>&lt;... class="bloc blocType01"&gt;
+   &lt;... class="header"&gt;&lt;/...&gt;
+   &lt;... class="body"&gt;&lt;/...&gt;
+   &lt;... class="footer"&gt;&lt;/...&gt;
+&lt;/...&gt;</code></pre>
+								</div>
+								<div class="footer">
+									bloc footer
+								</div>
+							</div>
+							<!-- FIN blocType01 -->
+							
+							<!-- blocType02 -->
+							<article class="bloc blocType02" id="exemple01">
+								<header class="header">
+									<h4 class="heading">Bloc type 2</h4>
+								</header>
+								<div class="body">
+									<p>
+									bloc content
+									</p>
+								</div>
+								<footer class="footer">
+									bloc footer
+								</footer>
+							</article>
+							<!-- FIN blocType02 -->
+							
+							Bloc type 3 ...							
+						</section>
+						
+						<section>
+							<h3>Presentation bloc</h3>
+							<section>
+								<!-- meaLeft -->
+								<h4>Mea Left</h4>
+								<div class="mea meaLeft">
+									<figure class="meaFigure">
+										<img src="assets/figure01.png" width="200" height="150" alt="alternative text" />
+										<figcaption class="figCaption">Legend</figcaption>
+									</figure>
+									<div class="meaContent">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut tristique ipsum. Praesent vel lacus eu velit sodales tempus in in nulla. Vivamus facilisis ultricies adipiscing. Aliquam erat volutpat. Duis elementum ultricies mi mattis semper. Donec facilisis pretium volutpat.</p>										
+										<p>Duis convallis sapien vitae eros tincidunt tempus. Phasellus convallis magna nec nulla facilisis pharetra. Aliquam et velit imperdiet ipsum consectetur ornare at ac nunc. Fusce vitae nulla sapien. Nullam sed justo velit. Aliquam erat volutpat. Nam eu purus libero. Vivamus justo orci, ornare at viverra quis, aliquet eget turpis.</p>
+									</div>
+								</div>
+								<!-- FIN meaLeft -->
+
+								<!-- meaRight -->
+								<h4>Mea Right</h4>
+								<div class="mea meaRight">
+									<figure class="meaFigure">
+										<img src="assets/figure01.png" width="200" height="150" alt="alternative text" />
+										<figcaption class="figCaption">Legend</figcaption>
+									</figure>
+									<div class="meaContent">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut tristique ipsum. Praesent vel lacus eu velit sodales tempus in in nulla. Vivamus facilisis ultricies adipiscing. Aliquam erat volutpat. Duis elementum ultricies mi mattis semper. Donec facilisis pretium volutpat.</p>										
+										<p>Duis convallis sapien vitae eros tincidunt tempus. Phasellus convallis magna nec nulla facilisis pharetra. Aliquam et velit imperdiet ipsum consectetur ornare at ac nunc. Fusce vitae nulla sapien. Nullam sed justo velit. Aliquam erat volutpat. Nam eu purus libero. Vivamus justo orci, ornare at viverra quis, aliquet eget turpis.</p>
+									</div>
+								</div>
+								<!-- FIN meaRight -->
+							</section>
+						</section>
+						
+						<!-- Grid bloc -->
+						<section>
+							<h3>Grid bloc</h3>
+							<ul class="grid" id="exemple02">
+								<li class="unit"></li>
+								<li class="unit"></li>
+								<li class="unit"></li>
+								<li class="unit"></li>
+								<li class="unit"></li>
+								<li class="unit"></li>
+								<li class="unit"></li>
+								<li class="unit"></li>
+							</ul>
+						</section>
+						<!-- END Grid Bloc -->
+						
+					</section>
+					
+					<section>
+						<h2>Information messages</h2>
+						<section>
+							<h3>Succes</h3>
+							<div class="info succes">
+								<h4 class="heading">Congratulations!</h4>
+								You successfully logged to our site.
+							</div>
+						</section>
+						<section>
+							<h3>Error</h3>
+							<div class="info error">
+								<h4 class="heading">Error!</h4>
+								Game over, Try again !
+							</div>
+						</section>
+						<section>
+							<h3>Information</h3>
+							<div class="info">
+								<h4 class="heading">Information!</h4>
+								 The first modern solution of general relativity that would characterize a black hole was found by Karl Schwarzschild in 1916
+							</div>
+						</section>
+					</section>
+					
+					<!-- Forms -->
+					<section>
+						<h2>Forms</h2>
+						<section>
+							<h3>form Type01</h3>
+							<form class="form formType01" action="/" name="" method="post">
+								<p class="field">
+									<label class="label" for="inputId01">Label</label>
+									<input type="text" id="inputId01" name="input01" />
+								</p>
+								<p class="field">
+									<label class="label" for="inputId02">Label</label>
+									<input type="email" id="inputId02" name="input02" placeholder="Your mail" />
+								</p>
+								<p class="field">
+									<label class="label">Label</label>
+									<select name="">
+										<option>Option 01</option>
+										<option>Option 02</option>
+										<option>Option 03</option>
+									</select>
+								</p>
+								<p class="field">
+									<label class="label" for="inputId03">Label</label>
+									<textarea id="inputId03"></textarea>
+								</p>
+								<p class="field">
+									<input type="checkbox" name="" id="inputId04" />
+									<label for="inputId04">Lorem ipsum dolor</label>
+								</p>
+								<footer>
+									<button class="btn" type="submit"><span class="btnInside">Submit</span></button>
+								</footer>
+							</form>
+						</section>
+
+						<section>
+							<h3>Form Type02</h3>
+							<form class="form formType02" action="/" name="" method="post">
+								<p class="field">
+									<label class="label" for="inputId11">Label text</label>
+									<input type="text" id="inputId11" name="input01" />
+								</p>
+								<p class="field">
+									<label class="label" for="inputId12">Label mail</label>
+									<input type="email" id="inputId12" name="input02" placeholder="Your mail" required />
+								</p>
+								<p class="field">
+									<label class="label">Label</label>
+									<select name="">
+										<option>Option 01</option>
+										<option>Option 02</option>
+										<option>Option 03</option>
+									</select>
+								</p>
+								<p class="field">
+									<label class="label labelTop" for="inputId13">Label</label>
+									<textarea id="inputId13"></textarea>
+								</p>
+								<footer>
+									<p>
+										<input type="checkbox" id="inputId14" name="" />
+										<label for="inputId14">Lorem ipsum dolor</label>
+									</p>
+									<button class="btn" type="submit"><span class="btnInside">Submit</span></button>
+								</footer>
+							</form>
+							
+							formType03...
+						</section>
+						
+						<section>
+							<h3>form messages</h3>
+							<form class="form formType01" action="/" name="" method="post">
+								<p class="field">
+									<label class="label" for="inputId20">Label</label>
+									<input type="text" id="inputId20" class="valid" name="" value="" />
+									<span class="formInfo formSucces">Succes</span>
+								</p>
+								<p class="field">
+									<label class="label" for="inputId21">Label</label>
+									<input type="text" id="inputId21" class="invalid" name="" value="" />
+									<span class="formInfo formError">Error</span>
+								</p>
+								<p class="field">
+									<label class="label" for="inputId22">Label</label>
+									<input type="text" id="inputId22" class="" name="" value="" />
+									<span class="formInfo">Information</span>
+								</p>
+								<footer>
+									<button type="submit" class="btn"><span class="btnInside">Submit</span></button>
+								</footer>
+							</form>
+						</section>
+						
+						<section>
+							<h3>Disabled States</h3>
+							<form class="form formType01" action="/" name="" method="post">
+								<p class="field">
+									<label class="label" for="inputId30">Label</label>
+									<input type="text" name="" id="inputId30" value="" disabled />
+								</p>
+								<footer>
+									<button type="submit" class="btn" disabled><span class="btnInside">Submit</span></button>
+								</footer>
+							</form>
+						</section>
+						
+					</section>
+					<!-- END Forms -->
+					
+					<!-- Tables -->					
+					<section>
+						<h2>Tables</h2>
+						
+						<table class="table tableType01">
+							<colgroup>
+								<col class="columnFirst" />
+								<col />
+								<col />
+								<col />
+								<col />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"><button type="button">Col</button></th>
+									<th scope="col"><a href="/">Col</a></th>
+									<th scope="col">Col</th>
+									<th scope="col">Col</th>
+									<th scope="col">Col</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Cell</td>
+									<td>Cell</td>
+									<td>Cell</td>
+									<td>Cell</td>
+									<td>Cell</td>
+								</tr>
+								<tr>
+									<td>Cell</td>
+									<td>Cell</td>
+									<td>Cell</td>
+									<td>Cell</td>
+									<td>Cell</td>
+								</tr>
+								<tr>
+									<td>Cell</td>
+									<td>Cell</td>
+									<td>Cell</td>
+									<td>Cell</td>
+									<td>Cell</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						tableType02 ...
+						
+					</section>
+					<!-- END Tables -->
+					
+					<!-- Pagination -->
+					<section>
+						<h2>Pagination</h2>
+						<nav class="pagination">
+							<h3 class="hidden">Pagination</h3>
+							
+							<a href="/" class="previous">Previous</a>
+							<ul>
+								<li>
+									<a href="/">1</a>
+								</li>
+								<li>
+									<a href="/">2</a>
+								</li>
+								<li>
+									<a href="#" class="active">3</a>
+								</li>
+								<li>
+									<a href="/">4</a>
+								</li>
+								<li>
+									<span class="disabled">...</span>
+								</li>
+								<li>
+									<a href="/">6</a>
+								</li>
+							</ul>
+							<a href="/" class="next">Next</a>
+						</nav>						
+					</section>	
+					<!-- END pagination -->				
+				</div>
+			</div>			
+		</div>
+			
+		<div id="footer">
+			<div class="inside">
+				<h2>Footer</h2>
+			</div>
+		</div>		
+		
+		<script type="text/javascript" src="javascripts/jquery.js?update=21092012"></script>
+		<script type="text/javascript" src="javascripts/default.js?update=21092012"></script>		
+		
+	</body>
+	
+</html>

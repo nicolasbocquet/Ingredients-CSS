@@ -1,0 +1,37 @@
+
+/* ---------------------- */
+/* &  1 - IE8 and IE7     */
+/* ---------------------- */
+
+/* Font-face fix */
+@font-face {	
+    font-family: 'bebas';
+	font-weight: normal;
+	src: url('../fonts/bebasneue.eot');
+	src: url('../fonts/bebasneue.eot?#iefix') format('embedded-opentype');
+}
+
+/* Box-shadow replacement */
+.blocType02 {border:1px solid #ccc;}
+
+/* */
+.alertIE {margin:0 auto; background:white; color:black; font-size:1.1em; padding:16px 26px; border-bottom:6px solid #AAAAAA;}
+
+
+
+/* ------------------- */
+/* &  2 - IE7 only     */
+/* ------------------- */
+
+/* display:inline-block */
+#topNav nav, #topNav ul, #topNav li, #topNav a, .pagination li, .pagination ul, .btn, .btnInside {*display:inline; *zoom:1;}
+
+/* Button fix */
+.btn {*overflow:visible; *margin:0 4px;}
+button .btnInside {*padding: 8px 18px;}
+button {*filter:chroma(color=#000000);}
+#search .btnInside {*padding:8px 18px;}
+
+/* Others */
+#skipLinks {*position:absolute; *z-index:1;}
+.pagination li {*margin-right:4px;}
