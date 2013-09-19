@@ -7,7 +7,7 @@
 		<meta name="author" content="Nicolas Bocquet">
 		<meta name="viewport" content="initial-scale=1.0"> 
 		
-		<title>Titre de la page</title>
+		<title>Ingredients CSS, une librairie CSS pour les cuistots du web !</title>
 
 		<link rel="shortcut icon" href="images/favicon.ico">
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -32,7 +32,7 @@
 			<ul>
 				<li><a href="#navigation">To Navigation</a></li>
 				<li><a href="#main">To Content</a></li>
-				<li><a href="#footer">To Footer</a></li>
+				<li><a href="#search">To Search</a></li>
 			</ul>
 		</nav>
 	
@@ -53,10 +53,10 @@
 		<!-- A banner can take up less space than that -->
 		<div id="banner" role="banner">
 			<div class="inside">
-				<hgroup>
+				<header>
 					<h1 class="logo">Ingredients CSS</h1>
-					<h2 class="baseline">For HTML &amp; CSS cooking !</h2>
-				</hgroup>
+					<p class="baseline">For HTML &amp; CSS cooking !</p>
+				</header>
 				
 				<form action="/" method="get">
 					<div id="search" role="search">
@@ -114,9 +114,6 @@
 							</p>
 							<p>
 								Button type 2 : ...
-							</p>
-							<p>
-								Button "link" : <button type="submit" class="btnLink">&lt;... class="btnLink"&gt;</button>
 							</p>
 						</section>
 						<section>
@@ -254,16 +251,16 @@
 							<h3>form Type01</h3>
 							<form class="form formType01" action="/" name="" method="post">
 								<p class="field">
-									<label class="label" for="inputId01">Label</label>
+									<label class="label" for="inputId01">Label text</label>
 									<input type="text" id="inputId01" name="input01" />
 								</p>
 								<p class="field">
-									<label class="label" for="inputId02">Label</label>
+									<label class="label" for="inputId02">Label mail</label>
 									<input type="email" id="inputId02" name="input02" placeholder="Your mail" />
 								</p>
 								<p class="field">
-									<label class="label">Label</label>
-									<select name="">
+									<label class="label" for="select01">Label</label>
+									<select name="" id="select01">
 										<option>Option 01</option>
 										<option>Option 02</option>
 										<option>Option 03</option>
@@ -273,11 +270,11 @@
 									<label class="label" for="inputId03">Label</label>
 									<textarea id="inputId03"></textarea>
 								</p>
-								<p class="field">
-									<input type="checkbox" name="" id="inputId04" />
-									<label for="inputId04">Lorem ipsum dolor</label>
-								</p>
 								<footer>
+									<p>
+										<input type="checkbox" name="" id="inputId04" />
+										<label for="inputId04">Lorem ipsum dolor</label>
+									</p>
 									<button class="btn" type="submit"><span class="btnInside">Submit</span></button>
 								</footer>
 							</form>
@@ -295,8 +292,8 @@
 									<input type="email" id="inputId12" name="input02" placeholder="Your mail" required />
 								</p>
 								<p class="field">
-									<label class="label">Label</label>
-									<select name="">
+									<label class="label" for="select11">Label</label>
+									<select name="" id="select11">
 										<option>Option 01</option>
 										<option>Option 02</option>
 										<option>Option 03</option>
@@ -306,11 +303,11 @@
 									<label class="label labelTop" for="inputId13">Label</label>
 									<textarea id="inputId13"></textarea>
 								</p>
+								<p class="field">
+									<input type="checkbox" id="inputId14" name="" />
+									<label for="inputId14">Lorem ipsum dolor</label>
+								</p>
 								<footer>
-									<p>
-										<input type="checkbox" id="inputId14" name="" />
-										<label for="inputId14">Lorem ipsum dolor</label>
-									</p>
 									<button class="btn" type="submit"><span class="btnInside">Submit</span></button>
 								</footer>
 							</form>
@@ -444,7 +441,7 @@
 			</div>			
 		</div>
 			
-		<div id="footer">
+		<div id="footer" role="contentinfo">
 			<div class="inside">
 				<h2>Footer</h2>
 			</div>
