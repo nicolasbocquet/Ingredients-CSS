@@ -71,19 +71,9 @@
 	input, textarea, select {font:normal 1.1em/100% Arial, Helvetica, sans-serif; color:#333333;}
 	
 	/* Cannot use :not() yet */
-	textarea, button, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"],
-	input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"],
-	input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {padding:7px; border:1px solid #888; vertical-align:middle; font-family:Arial, Helvetica, sans-serif;}
-	
-	textarea:hover, input[type="text"]:hover, input[type="password"]:hover, input[type="datetime"]:hover,
-	input[type="datetime-local"]:hover, input[type="date"]:hover, input[type="month"]:hover, input[type="time"]:hover,
-	input[type="week"]:hover, input[type="number"]:hover, input[type="email"]:hover, input[type="url"]:hover,
-	input[type="search"]:hover, input[type="tel"]:hover, input[type="color"]:hover {box-shadow:0 0 5px rgba(0,0,0,0.2);}
-
-	textarea:focus, select:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus,
-	input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus,
-	input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus,
-	input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus {border-color:#333; box-shadow:none;}
+	textarea, button, input {box-sizing:border-box; padding:7px; border:1px solid #888; vertical-align:middle; font-family:Arial, Helvetica, sans-serif;}
+	textarea:hover, input[type="text"]:hover, input:hover {box-shadow:0 0 5px rgba(0,0,0,0.2);}
+	textarea:focus, select:focus, input:focus {border-color:#333; box-shadow:none;}
 
 	form input[type=checkbox], form input[type=radio] {width:auto; vertical-align:middle;}
 	input[disabled] {border-color:#ccc; cursor:not-allowed; box-shadow:none;}
@@ -91,7 +81,6 @@
 	input:-moz-placeholder {color: #999;}
 	select {padding:6px 5px; border: 1px solid #888888; font-size:14px; font-size:1.4rem; line-height:26px; height:34px;}
 	option {padding:3px 7px;}
-	form footer {margin-bottom:3em;}
 
 	/* Table */
 	table {border-collapse:collapse; border-spacing:0; max-width:100%;}
@@ -105,7 +94,7 @@
 	a img {border:none;}	
 
 	/* HELPERS */
-	.hidden {position: absolute; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);}
+	.visuallyHidden {position: absolute; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);}
 	.wrapper {position:relative; margin-bottom:5em;}
 	.wrapper:after {content:""; clear:both; display:block;}
 
@@ -115,48 +104,47 @@
 /* &  3 - STRUCTURE     */
 /* -------------------- */
 	
-	#topNav > .inside, #breadcrumbs > .inside, #banner > .inside, 
-	#header > .inside, #navigation > .inside, #content > .inside, #footer > .inside {position:relative; margin:0 auto; min-width:769px; max-width:1040px;}
-	#topNav, #breadcrumbs, #banner, #header, #navigation, #content, #footer {padding:0 16px;}
+	.topNav > .inside, .breadcrumbs > .inside, .banner > .inside, 
+	.navigation > .inside, .content > .inside, .contentinfo > .inside {display:table; width:100%; table-layout:fixed; position:relative; margin:0 auto; min-width:769px; max-width:1040px;}
+	.topNav, .breadcrumbs, .banner, .navigation, .content, .contentinfo {padding:0 16px;}
 	
-	#skipLinks a {position:absolute; z-index:999; left:-9999px; top:-9999px; white-space:nowrap;}
-	#skipLinks a:focus, #skipLinks a:active {position:absolute; top:10px; left:10px; border:2px solid #F0F0F0; background:#333; color:white; padding:14px 22px; font-size:20px; font-size:2rem;}
+	.skipLinks a {position:absolute; z-index:999; left:-9999px; top:-9999px; white-space:nowrap;}
+	.skipLinks a:focus, .skipLinks a:active {position:absolute; top:10px; left:10px; border:2px solid #F0F0F0; background:#333; color:white; padding:14px 22px; font-size:20px; font-size:2rem;}
 	
-	#topNav {background:#333; color:#AAAAAA; min-height:40px;}
-	#topNav nav, #topNav ul, #topNav li, #topNav a {display:inline-block; vertical-align:middle;}
-	#topNav a {padding:12px 16px; color:#AAAAAA;}
-	#topNav a:hover, #topNav a:focus {text-decoration:none; color:white;}
-	#topNav .logo {font-size:1.3em; padding:3px 0; margin-right:35px;}
+	.topNav {background:#333; color:#AAAAAA; min-height:42px;}
+	.topNav ul, .topNav li, .topNav .item {display:inline-block; vertical-align:middle;}
+	.topNav .item {padding:14px 16px; color:#AAAAAA;}
+	.topNav .item:hover, .topNav .item:focus {text-decoration:none; color:white;}
+	.topNav .logo {font-size:1.3em; padding:5px 0; margin-right:35px;}
 	
-	#breadcrumbs {padding-top:1.5em; padding-bottom:1.5em; background:white;}
+	.breadcrumbs {padding-top:1.5em; padding-bottom:1.5em; background:white;}
 	
-	#banner {padding-top:3em; padding-bottom:3em;}
-	#banner header {background:url(../assets/logo.png) no-repeat left 10px; padding-left:98px; padding-right:375px;}
-	#banner .logo, #banner .baseline {margin:0;}
-	#banner .baseline {color:#555; font-size:34px; font-size:3.2rem; font-family:'bebas', 'Trebuchet MS';}
+	.banner {padding-top:3em; padding-bottom:3em;}
+	.identity {background:url(../assets/logo.png) no-repeat left 10px; padding-left:98px; padding-right:375px;}
+	.identity > .logo, .identity .baseline {margin:0;}
+	.identity > .baseline {color:#555; font-size:34px; font-size:3.2rem; font-family:'bebas', 'Trebuchet MS';}
 	
-	#search {position:absolute; right:0; top:30%; display:inline-block; background:#ddd; padding:4px; border-radius:6px;}
-	#search #inputSearch {border:none; width:250px; padding:11px 8px 8px; border:1px solid #ccc; border-radius:3px;}
-	#search .btn {}
-	#search .btnInside {padding:9px 18px;}
+	.search {position:absolute; right:0; top:30%; display:inline-block; background:#ddd; padding:4px; border-radius:6px;}
+	.search .inputSearch {border:none; width:250px; padding:11px 8px 8px; border:1px solid #ccc; border-radius:3px;}
+	.search .btn {}
+	.search .btnInside {padding:9px 18px;}
 	
-	#navigation { border-bottom:1px solid #DDDDDD;}
-	#navigation ul {position:relative; left:-18px;}
-	#navigation ul:after {display:block; content:""; clear:both;}
-	#navigation li {float:left; padding:12px 0;}
-	#navigation a {display:block; padding:0 18px; border-left:1px solid #ccc; text-transform:uppercase; font-size:12px; font-size:1.2rem; font-weight:bold; color:#333;}
-	#navigation li:first-child a {border:none;}
-	#navigation a:hover, #navigation a:active {text-decoration:none; color:#2192BF;}
+	.navigation {border-bottom:1px solid #DDDDDD;}
+	.navigation .inside {max-width:1076px;}
+	.navigation ul:after {display:block; content:""; clear:both;}
+	.navigation li {float:left; padding:12px 0;}
+	.navigation .item {display:block; padding:0 18px; border-left:1px solid #ccc; text-transform:uppercase; font-size:12px; font-size:1.2rem; font-weight:bold; color:#333;}
+	.navigation li:first-child .item {border:none;}
+	.navigation .item:hover, .navigation .item:active {text-decoration:none; color:#2192BF;}
 	
-	#content {background:white;}
-	#content:after {display:block; content:""; clear:both;}
+	.content {background:white;}
+	.content:after {display:block; content:""; clear:both;}
 	
-	#main {overflow:hidden; position:relative; padding:0 3px; left:-3px;}
-	#complementary {float:right; width:25%; margin-left:8%;}
-	#complementary .inside {}
+	.main, .complementary {display:table-cell; width:100%; position:relative;}
+	.complementary {width:50%; padding-left:8%;}
+	.complementary .inside {}
 		
-	#footer {border-top:1px solid #DDDDDD; padding-top:1em; padding-bottom:1em;}
-
+	.contentinfo {border-top:1px solid #DDDDDD; padding-top:1em; padding-bottom:1em;}
 
 
 /* --------------------------- */
@@ -222,6 +210,7 @@
 	/* Forms Types */
 	.form {margin-bottom:3em;}
 	.form .field {margin-bottom:1.2em;}
+	.form .footer {margin-bottom:3em;}
 	.formInfo {position:absolute; z-index:1; margin:8px;}	
 	.form .valid {border-color:#468847;}
 	.form .valid ~ .formInfo {color:green;}
@@ -278,8 +267,8 @@
 /* &  4 - ELEMENTS SPECIFIQUES    */
 /* ------------------------------ */
 
-	#exemple01 {width:60%;}
-	#exemple02 .unit {background:#ddd; width:15%; height:40px;}
+	.exemple01 {width:60%;}
+	.exemple02 .unit {background:#ddd; width:15%; height:40px;}
 
 
 	
@@ -294,26 +283,31 @@
 }
 
 @media screen and (max-width: 830px) {
-	#topNav > .inside, #breadcrumbs > .inside, #banner > .inside, #header > .inside, #navigation > .inside, #content > .inside, #footer > .inside {min-width:0; max-width:auto;}	
-	#banner {padding-bottom:1em;}
-	#banner header {padding-right:0; padding-bottom:2em;}
-	#search {position:relative; display:block;}
-	#search #inputSearch {width:87%; height:23px;}
-	#search .btn {position:absolute; top:4px; right:4px; height:44px; border-radius:0 3px 3px 0;}
+	.topNav > .inside, .breadcrumbs > .inside, .banner > .inside, .navigation > .inside, .content > .inside, .contentinfo > .inside {min-width:0; max-width:auto;}	
+	.banner {padding-bottom:1em;}
+	.identity {padding-right:0; padding-bottom:2em;}
+	.search {position:relative; display:block;}
+	.search .inputSearch {width:100%; height:44px;}
+	.search .btn {position:absolute; top:4px; right:4px; height:44px; border-radius:0 3px 3px 0;}
 }
 @media screen and (max-width: 640px) {
-	#complementary {display:none;}
-	#banner {padding-top:2em;}
+	.complementary {display:none;}
+	.banner {padding-top:2em;}
+	.navigation {padding-bottom:16px;}
+	.navigation li {float:none; padding:4px 0;}
+	.navigation .item {padding:12px 14px; text-align:center; background:white; box-shadow:0 0 3px rgba(0,0,0,0.4); border-radius:4px;}
+	.navigation .item:hover, .navigation .item:focus {text-decoration:none; color:#2192BF; box-shadow:0 0 3px #2192BF;}
 }
 @media screen and (max-width: 480px) {
 	.mea .meaFigure {float:none; margin-bottom:1em; text-align:center;}
-	#banner header {background-image:url(../assets/logoResponsive.png); background-position:left 7px; padding-left:54px;}
-	#banner .logo {font-size:3.8rem;}
-	#banner .baseline {font-size:2.2rem;}
-	.form input, .form textarea {width:94%;}
-	.form select {width:98%;}
+	.topNav .item {padding:14px 10px;}
+	.topNav .logo {margin-right:12px; padding:5px 0;}
+	.identity {background-image:url(../assets/logoResponsive.png); background-position:left 7px; padding-left:54px;}
+	.identity > .logo {font-size:3.8rem;}
+	.identity > .baseline {font-size:2.2rem;}
+	.form input, .form textarea, .form select, .form > .footer .btn {width:100%;}
 	.formType01 .label {display:block; width:auto; text-align:left;}
-	.formType01 footer {margin-left:0;}
+	.formType01 .footer {margin-left:0;}
 	.formInfo {position:relative; display:block;}
 }
 @media screen and (max-width: 380px) {}

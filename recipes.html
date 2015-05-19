@@ -28,7 +28,7 @@
 		<![endif]-->
 
 		<!-- Skiplinks for accessibility -->
-		<nav id="skipLinks">
+		<nav class="skipLinks" id="skipLinks">
 			<ul>
 				<li><a href="#navigation">To Navigation</a></li>
 				<li><a href="#main">To Content</a></li>
@@ -37,30 +37,28 @@
 		</nav>
 	
 		<!-- Optionnal top nav -->		
-		<div id="topNav">
-			<div class="inside">
-				<a href="/" class="logo"><img src="assets/logoSmall.png" width="51" height="33" alt="Logo" /></a>				
-				<nav>
-					<ul>
-						<li><a href="/">Link 1</a></li>
-						<li><a href="/">Link 2</a></li>
-						<li><a href="/">Link 3</a></li>
-					</ul>
-				</nav>
-			</div>
+		<div class="topNav">
+			<nav class="inside">
+				<ul>
+					<li><a class="item logo" href="/"><img src="assets/logoSmall.png" width="51" height="33" alt="Logo" /></a></li>
+					<li><a class="item" href="/">Link 1</a></li>
+					<li><a class="item" href="/">Link 2</a></li>
+					<li><a class="item" href="/">Link 3</a></li>
+				</ul>
+			</nav>
 		</div>
 
 		<!-- A banner can take up less space than that -->
-		<div id="banner" role="banner">
+		<div class="banner" id="banner" role="banner">
 			<div class="inside">
-				<header>
+				<header class="identity">
 					<h1 class="logo">Ingredients CSS</h1>
 					<p class="baseline">For HTML &amp; CSS cooking !</p>
 				</header>
 				
 				<form action="/" method="get">
-					<div id="search" role="search">
-						<input id="inputSearch" type="text" name="" value="" placeholder="" />
+					<div class="search" id="search" role="search">
+						<input class="inputSearch" type="text" name="" value="" placeholder="" />
 						<button type="submit" class="btn btnType01"><span class="btnInside">Search</span></button>
 					</div>
 				</form>
@@ -68,18 +66,18 @@
 		</div>
 		
 		<!-- Classic navigation -->
-		<nav id="navigation" role="navigation">
+		<nav class="navigation" id="navigation" role="navigation">
 			<ul class="inside">
-				<li><a href="/">Menu 1</a></li>
-				<li><a href="/">Menu 2</a></li>
-				<li><a href="/">Menu 3</a></li>
-				<li><a href="/">Menu 4</a></li>
-				<li><a href="/">Menu 5</a></li>
+				<li><a class="item" href="/">Menu 1</a></li>
+				<li><a class="item" href="/">Menu 2</a></li>
+				<li><a class="item" href="/">Menu 3</a></li>
+				<li><a class="item" href="/">Menu 4</a></li>
+				<li><a class="item" href="/">Menu 5</a></li>
 			</ul>
 		</nav>
 
 		<!-- Breadcrumbs -->
-		<nav id="breadcrumbs">
+		<nav class="breadcrumbs" id="breadcrumbs">
 			<p class="inside">
 				<a href="/" rel="index up up up">Accueil</a> >
 				<a href="/" rel="up up">Page 1</a> >
@@ -89,18 +87,10 @@
 		</nav>
 		
 		<!-- Main content -->
-		<div id="content">
+		<div class="content" id="content">
 			<div class="inside">
-				
-				<!-- Sidebar -->	
-				<aside id="complementary" role="complementary">
-					<div class="inside">
-						<h2>SIDEBAR</h2>
-					</div>
-				</aside>
-				<!-- FIN sidebar -->
-				
-				<div id="main" role="main">	
+								
+				<div class="main" id="main" role="main">	
 					<!-- Buttons -->			
 					<section>
 						<h2>Buttons</h2>
@@ -150,7 +140,7 @@
 							<!-- FIN blocType01 -->
 							
 							<!-- blocType02 -->
-							<article class="bloc blocType02" id="exemple01">
+							<article class="bloc blocType02 exemple01">
 								<header class="header">
 									<h4 class="heading">Bloc type 2</h4>
 								</header>
@@ -204,7 +194,7 @@
 						<!-- Grid bloc -->
 						<section>
 							<h3>Grid bloc</h3>
-							<ul class="grid" id="exemple02">
+							<ul class="grid exemple02">
 								<li class="unit"></li>
 								<li class="unit"></li>
 								<li class="unit"></li>
@@ -270,7 +260,7 @@
 									<label class="label" for="inputId03">Label</label>
 									<textarea id="inputId03"></textarea>
 								</p>
-								<footer>
+								<footer class="footer">
 									<p>
 										<input type="checkbox" name="" id="inputId04" />
 										<label for="inputId04">Lorem ipsum dolor</label>
@@ -307,7 +297,7 @@
 									<input type="checkbox" id="inputId14" name="" />
 									<label for="inputId14">Lorem ipsum dolor</label>
 								</p>
-								<footer>
+								<footer class="footer">
 									<button class="btn" type="submit"><span class="btnInside">Submit</span></button>
 								</footer>
 							</form>
@@ -333,7 +323,7 @@
 									<input type="text" id="inputId22" class="" name="" value="" />
 									<span class="formInfo">Information</span>
 								</p>
-								<footer>
+								<footer class="footer">
 									<button type="submit" class="btn"><span class="btnInside">Submit</span></button>
 								</footer>
 							</form>
@@ -346,7 +336,7 @@
 									<label class="label" for="inputId30">Label</label>
 									<input type="text" name="" id="inputId30" value="" disabled />
 								</p>
-								<footer>
+								<footer class="footer">
 									<button type="submit" class="btn" disabled><span class="btnInside">Submit</span></button>
 								</footer>
 							</form>
@@ -410,7 +400,7 @@
 					<section>
 						<h2>Pagination</h2>
 						<nav class="pagination">
-							<h3 class="hidden">Pagination</h3>
+							<h3 class="visuallyHidden">Pagination</h3>
 							
 							<a href="/" class="previous">Previous</a>
 							<ul>
@@ -438,10 +428,19 @@
 					</section>	
 					<!-- END pagination -->				
 				</div>
+				
+				<!-- Sidebar -->	
+				<aside class="complementary" id="complementary" role="complementary">
+					<div class="inside">
+						<h2>SIDEBAR</h2>
+					</div>
+				</aside>
+				<!-- FIN sidebar -->
+
 			</div>			
 		</div>
 			
-		<div id="footer" role="contentinfo">
+		<div class="contentinfo" id="contentinfo" role="contentinfo">
 			<div class="inside">
 				<h2>Footer</h2>
 			</div>
