@@ -68,18 +68,17 @@
 	 /* Forms */
 	fieldset {border:none; margin:0 0 1em 0; padding:0;}
 	label {display:inline-block; vertical-align:middle; margin:3px 10px 3px 0; font-size:15px; font-size:1.5rem;}
+	input, textarea, select, button {box-sizing:border-box; padding:9px; border:1px solid #888; vertical-align:middle;}
 	input, textarea, select {font:normal 1.1em/100% Arial, Helvetica, sans-serif; color:#333333;}
+	input[type="text"]:hover, input:hover, textarea:hover {box-shadow:0 0 5px rgba(0,0,0,0.2);}
+	input:focus, textarea:focus, select:focus {border-color:#333; box-shadow:none;}
 	
-	/* Cannot use :not() yet */
-	textarea, button, input {box-sizing:border-box; padding:7px; border:1px solid #888; vertical-align:middle; font-family:Arial, Helvetica, sans-serif;}
-	textarea:hover, input[type="text"]:hover, input:hover {box-shadow:0 0 5px rgba(0,0,0,0.2);}
-	textarea:focus, select:focus, input:focus {border-color:#333; box-shadow:none;}
-
 	form input[type=checkbox], form input[type=radio] {width:auto; vertical-align:middle;}
 	input[disabled] {border-color:#ccc; cursor:not-allowed; box-shadow:none;}
 	input::-webkit-input-placeholder {color: #999;}
 	input:-moz-placeholder {color: #999;}
-	select {padding:6px 5px; border: 1px solid #888888; font-size:14px; font-size:1.4rem; line-height:26px; height:34px;}
+	
+	select {padding:6px 5px; font-size:14px; font-size:1.4rem; line-height:26px; height:3.4rem;}
 	option {padding:3px 7px;}
 
 	/* Table */
@@ -218,16 +217,14 @@
 	.form .invalid ~ .formInfo {color:#B94A48;}
 		
 	.formType01 {}
-	.formType01 input, .formType01 textarea {width:240px;}
-	.formType01 select {width:255px;}
+	.formType01 input, .formType01 textarea, .formType01 select {width:240px;}
 	.formType01 .label {width:100px; text-align:right}
 	.formType01 footer {margin-left:114px;}
 	.formType01 .labelTop {vertical-align:top;}
 	
 	.formType02 {}
 	.formType02 .label {display:block;}
-	.formType02 input, .formType02 textarea {width:300px;}
-	.formType02 select {width:315px;}
+	.formType02 input, .formType02 textarea, .formType02 select {width:300px;}
 
 
 	/* Buttons */
